@@ -485,7 +485,7 @@ const Select = React.createClass({
 		if (this.props.simpleValue && value) {
 			value = this.props.multi ? value.map(i => i[this.props.valueKey]).join(this.props.delimiter) : value[this.props.valueKey];
 		}
-		this.props.onChange(value);
+		return this.props.onChange(value);
 	},
 
 	selectValue (value) {
