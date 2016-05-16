@@ -496,7 +496,7 @@ const Select = React.createClass({
 				inputValue: '',
 			});
 		} else {
-			this.setValue(value);
+			if (this.setValue(value) === false) return;
 			this.setState({
 				isOpen: false,
 				inputValue: '',
